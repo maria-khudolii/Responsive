@@ -38,7 +38,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	min-width: 320px; 
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -63,8 +63,9 @@ header {
 .logo {
 	width: 100px;
 	height: 60px;
-	display: block;
 	margin: 0 auto 80px;
+	display: inline-block;
+	vertical-align: top; 
 }
 
 .nav {
@@ -120,18 +121,58 @@ header .contact-form {
 .main {
 	width: 1024px;
 	margin: 0 auto;
+	text-align: center;
+}
+.text {
+	font-size: 28px;
+	line-height: 34px;
+	margin-bottom: 80px;
+}
+
+.title {
+	font-size: 40px; 
+	line-height: 49px; 
+	padding: 16px 0px; 
+	text-transform: uppercase; 
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.history {
+	display: flex;
+	margin: 60px 0px;
+}
+
+.history-content {
+	display: flex;
+	flex: 0 0 500px;
+	align-items: center;
+	background-color: #000000;
+	color: #fff;
+	font-size: 18px;
+	line-height: 22px;
+	padding: 50px;
+	text-align: left;
+}
+
+.history-content + .history-content {
+	margin-left: 28px;
+}
+.history-content span {
+	font-size: 48px;
 }
 
 
 /* tablet */
 @media only screen
-and (min-width: 376px)
+and (min-width: 377px)
 and (max-width: 1024px) {
 	.nav {
 		display:none;
 	}
 	.burger-menu {
-		display: block;
+			display: inline-block;
+			vertical-align: top;
 	}
 	.menu-open header {
 	background: #000; 	
@@ -144,13 +185,56 @@ and (max-width: 1024px) {
 	.menu-open .burger-menu-line:after  {
 		background: #fff;
 	}
-}
 
+	.main {
+    	width: 100%;
+    	margin: 0 auto;
+    	padding: 0 48px;
+    	text-align: center;
+    	}
+
+	.text {
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0 52px 47px 52px;
+		}
+
+	.title {
+		font-size: 28px; 
+		line-height: 34px; 
+		padding: 16px 0px; 
+		text-transform: uppercase; 
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		margin-bottom: 32px; 
+		}
+
+	.history {
+		display: block; 
+		margin: 0 0 32px 0px;
+		}
+
+	.history-content {
+		display: block;
+		padding: 48px;
+		margin-bottom: 32px;
+		font-size: 18px;
+		line-height: 22px; 
+		color: #fff;
+		}
+
+	.history-content span {
+		font-size: 48px;
+		}
+	.history-content + .history-content {
+		margin: 0;
+		}
+	}
 
 /* mobile */
 @media only screen
 and (min-width: 0)
-and (max-width: 375px) {
+and (max-width: 376px) {
 	.logo {
 		display: none;
 	}
@@ -173,4 +257,52 @@ and (max-width: 375px) {
 	.menu-open .burger-menu-line:after {
 		display: none;
 	}
+	.slick-slider {
+		display: none;
+	}
+
+	.main {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 20px;
+		text-align: center;
+		}
+	
+	.text {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 0 23px 0;
+		}
+
+	.title {
+		font-size: 20px; 
+		line-height: 24px; 
+		padding: 16px 0px; 
+		text-transform: uppercase; 
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		margin-bottom: 24px;
+		}
+
+	.history {
+		display: block;
+		margin: 0 0 24px 0;
+		}
+
+	.history-content {
+		display: block;
+		padding: 20px;
+		margin-bottom: 24px;
+		font-size: 16px;
+		line-height: 20px; 
+		color: #fff;
+		}
+
+	.history-content span {
+		display: block;
+		font-size: 24px;
+		}
+	.history-content + .history-content {
+		margin: 0;
+		}
 }
