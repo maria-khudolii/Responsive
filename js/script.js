@@ -1,0 +1,39 @@
+$('.slider').slick({
+	arrows: false,
+	dots: true,
+	infinite: true,
+	speed: 1000,
+	slidesToShow: 3,
+	slidesToScroll: 3,
+	adaptiveHeight: true,
+	easing: 'ease',
+	autoplay: true,
+	autoplaySpeed: 3500,
+	draggble: false,
+	touchThreshold: 10,
+	waitForAnimate: false,
+	variableWidth: true,
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				infinite: true,
+				dots: true
+			}
+		},
+		{
+			breakpoint: 377,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: true
+			}
+		}
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	]
+});
