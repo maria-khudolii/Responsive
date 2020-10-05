@@ -315,22 +315,36 @@ textarea:focus::placeholder {
 /* mobile */
 @media only screen and (min-width: 0) and (max-width: 375px) {
 	.logo {
-		display: block;
+		display: inline-block;
+		padding: 0 0 0 200px;
+		margin: 0;
 	}
 	.nav {
 		display: block;
 	}
+	.nav-item {
+		margin: 48px 0px 48px;
+	}
+	.nav-item a {
+		color: #fff;
+	}
+	.nav-item:last-child {
+		margin-bottom: 90px;
+	}
 	.burger-menu {
-		display: block;
+		display: inline-block;
 	}
 	.menu-open header {
 		background: #000;
+		padding: 24px 20px 40px 20px;
 	}
 	.menu-open {
 		height: 100%;
 	}
 	.menu-open .logo * {
 		fill: #fff;
+		width: 80px;
+		height: 48px;
     }
 	.menu-open .burger-menu-line,
 	.menu-open .burger-menu-line:before,
@@ -349,6 +363,41 @@ textarea:focus::placeholder {
 	transform: rotate(-45deg);
 	top: 0;
 	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    }
+    .menu-form {
+    display: block;
+    position: relative;
+	padding: 20px 20px 101px 20px;
+	border: 1px solid #fff;
+	margin: 0 0 141px;
+    }
+    .menu-form-textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: #000;
+    }
+    .menu-form-textarea::placeholder {
+	font-size: 18px;
+	line-height: 29px;
+	color: #fff;
+	opacity: 0.5;
+    }
+    .menu-form-btn {
+    width: 100%;
+	position: absolute;
+	background: #fff;
+	top: 176px;
+	right: 0px;
+	color: #000;
+	padding: 16px 60px;
+	margin-bottom: 60px;
+    font-size: 24px;
+    line-height: 28px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
     }
     .main {
     width: 100%;
