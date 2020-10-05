@@ -55,8 +55,9 @@ table {
  box-sizing: border-box;
 }
 body {
-	margin: 0;
+	line-height: 1;
 	min-width: 320px;
+	font-family: 'Montserrat', sans-serif;
 }
 header {
 	padding: 80px;
@@ -114,8 +115,7 @@ header {
 	left: 0;
 }
 .burger-menu-line:before {
-	top: 10px;
-	 
+	top: 10px; 
 }
 .burger-menu-line:after {
 	top: 20px;
@@ -159,11 +159,11 @@ header {
 	border-top: 1px solid #000000;
 	border-bottom: 1px solid #000000;
 }
-.dark-text {
+.history {
 	display: flex;
 	margin: 60px 0px;
 }
-.dark-text-block {
+.history-content {
 	display: flex;
 	flex: 0 0 500px;
 	align-items: center;
@@ -174,10 +174,10 @@ header {
 	padding: 50px;
 	text-align: left;
 }
-.dark-text-block + .dark-text-block {
+.history-content + .history-content {
 	margin-left: 28px;
 }
-.dark-text-block span {
+.history-content span {
 	font-size: 48px;
 }
 .form-inner {
@@ -288,12 +288,11 @@ textarea:focus::placeholder {
     .menu-open .burger-menu-line:before {
 	transform: rotate(45deg);
 	top: 0;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
     }
     .menu-open .burger-menu-line:after {
 	transform: rotate(-45deg);
 	top: 0;
-	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	
     }
     .main {
     width: 100%;
@@ -345,7 +344,7 @@ textarea:focus::placeholder {
 		fill: #fff;
 		width: 80px;
 		height: 48px;
-    }
+	}
 	.menu-open .burger-menu-line,
 	.menu-open .burger-menu-line:before,
 	.menu-open .burger-menu-line:after {
@@ -357,14 +356,12 @@ textarea:focus::placeholder {
     .menu-open .burger-menu-line:before {
 	transform: rotate(45deg);
 	top: 0;
-    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
     }
     .menu-open .burger-menu-line:after {
 	transform: rotate(-45deg);
 	top: 0;
-	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
     }
-    .menu-form {
+     .menu-form {
     display: block;
     position: relative;
 	padding: 20px 20px 101px 20px;
@@ -372,10 +369,6 @@ textarea:focus::placeholder {
 	margin: 0 0 141px;
     }
     .menu-form-textarea {
-    width: 100%;
-    border: none;
-    outline: none;
-    resize: none;
     background: #000;
     }
     .menu-form-textarea::placeholder {
