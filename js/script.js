@@ -12,7 +12,6 @@ $('.slider').slick({
 	draggble: false,
 	touchThreshold: 10,
 	waitForAnimate: false,
-	variableWidth: true,
 	responsive: [
 		{
 			breakpoint: 1024,
