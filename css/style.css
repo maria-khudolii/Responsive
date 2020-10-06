@@ -142,7 +142,7 @@ header {
 .slick-dots .slick-active{
 	background: #000;
 }
-.main {
+.container{
 	width: 1024px;
 	margin: 0 auto;
 	text-align: center;
@@ -282,7 +282,7 @@ header {
 	.menu-open .burger-menu-line:after {
 		background: #fff;
 	}
-    .main {
+    .container {
 	    width: 100%;
 	    margin: 0 auto;
 	    padding: 0 48px;
@@ -370,7 +370,7 @@ header {
 	    border: none;
 	    cursor: pointer;
     }
-    .main {
+    .container {
 	    width: 100%;
 	    margin: 0 auto;
 	    padding: 0 20px;
