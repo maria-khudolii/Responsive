@@ -203,8 +203,8 @@ header .contact-form {
 	display: none;
 }
 
-.main {
-	width: 1024px;
+.container {
+	max-width: 1024px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -274,7 +274,7 @@ textarea:focus::placeholder {
 	border: none;
 }
 /* Slick-slider all styles  */
-.slider {
+.slick-slider {
 	max-width: 1320px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -289,7 +289,7 @@ textarea:focus::placeholder {
 	display: flex;
 	justify-content: center;
 }
-.slider .slick-dots li {
+.slick-slider .slick-dots li {
 	list-style: none;
 }
 .slick-dots li button {
@@ -301,7 +301,7 @@ textarea:focus::placeholder {
 	border: 1px solid #000000;
 	margin: 40px 5px 80px;
 }
-.slider .slick-dots li.slick-active button {
+.slick-slider .slick-dots li.slick-active button {
 	background-color: black;
 }
 /* tablet */
