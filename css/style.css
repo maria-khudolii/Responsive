@@ -64,8 +64,7 @@ header {
 	width: 100px;
 	height: 60px;
 	margin: 0 auto 80px;
-	display: inline-block;
-	vertical-align: top; 
+	display: block; 
 }
 
 .nav {
