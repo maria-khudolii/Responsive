@@ -485,12 +485,13 @@ textarea:focus::placeholder {
 		margin: 0px;
 	}
 	.slick-dots li button {
-		font-size: 1px;
+		font-size: 0px;
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
 		outline: none;
 		border: 1px solid #000000;
-		margin: 24px 8px;
+		margin: 24px 5px;
+		padding: 0;
 	}
 }
