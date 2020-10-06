@@ -52,7 +52,7 @@ table {
 *,
 *:before,
 *:after {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
 	line-height: 1;
@@ -180,7 +180,7 @@ header {
 .history-content span {
 	font-size: 48px;
 }
-.form-inner {
+.contact-form {
 	display: flex;
 	align-items: center;
 	padding: 30px;
@@ -188,19 +188,19 @@ header {
 	border: 1px solid #000000;
 	margin: 47px 0px 100px;
 }
-textarea {
+.contact-form-textarea {
 	width: 100%;
 	border: none;
 	outline: none;
 	resize: none;
 }
-textarea::placeholder {
+.contact-form-textarea::placeholder {
 	font-size: 18px;
 	line-height: 22px;
 	color: #000;
 	opacity: 0.5;
 }
-textarea:focus::placeholder {
+.contact-form-textarea:focus::placeholder {
 	color: transparent;
 }
 .form-btn {
@@ -243,72 +243,60 @@ textarea:focus::placeholder {
 		fill: #fff;
 	}
     .menu-form {
-	display: flex;
-	align-items: center;
-	padding: 30px;
-	width: 100%;
-	border: 1px solid #fff;
-	margin: 47px 0px 100px;
+		display: flex;
+		align-items: center;
+		padding: 30px;
+		width: 100%;
+		border: 1px solid #fff;
+		margin: 47px 0px 100px;
     }
    .menu-form-textarea {
-	width: 100%;
-	border: none;
-	outline: none;
-	resize: none;
-	background: #000;
+		width: 100%;
+		border: none;
+		outline: none;
+		resize: none;
+		background: #000;
     }
      .menu-form-textarea::placeholder {
-	font-size: 18px;
-	line-height: 22px;
-	color: #fff;
-	opacity: 0.5;
+		font-size: 18px;
+		line-height: 22px;
+		color: #fff;
+		opacity: 0.5;
     }
    .menu-form-textarea:focus::placeholder {
-	color: transparent;
+	    color: transparent;
     }
    .menu-form-btn {
-	margin-left: 30px;
-	background: #fff;
-	border-radius: 8px;
-	color: #000;
-	font-size: 28px;
-	line-height: 34px;
-	padding: 15px 60px;
-	cursor: pointer;
-	border: none;
+		margin-left: 30px;
+		background: #fff;
+		border-radius: 8px;
+		color: #000;
+		font-size: 28px;
+		line-height: 34px;
+		padding: 15px 60px;
+		cursor: pointer;
+		border: none;
     }
 	.menu-open .burger-menu-line,
 	.menu-open .burger-menu-line:before,
 	.menu-open .burger-menu-line:after {
 		background: #fff;
 	}
-    .menu-open .burger-menu-line {
-	background: transparent;
-    }
-    .menu-open .burger-menu-line:before {
-	transform: rotate(45deg);
-	top: 0;
-    }
-    .menu-open .burger-menu-line:after {
-	transform: rotate(-45deg);
-	top: 0;
-	
-    }
     .main {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 48px;
-    text-align: center;
+	    width: 100%;
+	    margin: 0 auto;
+	    padding: 0 48px;
+	    text-align: center;
     }
-    .form-inner {
-	margin: 32px 0px 80px;
+    .contact-form {
+	    margin: 32px 0px 80px;
     }
     .title {
-	font-size: 28px;
-	line-height: 34px;
-	padding: 16px 0px;
-	border-top: 1px solid #000000;
-	border-bottom: 1px solid #000000;
+		font-size: 28px;
+		line-height: 34px;
+		padding: 16px 0px;
+		border-top: 1px solid #000000;
+		border-bottom: 1px solid #000000;
     }
 }
 /* mobile */
@@ -350,75 +338,65 @@ textarea:focus::placeholder {
 	.menu-open .burger-menu-line:after {
 		background: #fff;
 	}
-	.menu-open .burger-menu-line {
-	background: transparent;
-    }
-    .menu-open .burger-menu-line:before {
-	transform: rotate(45deg);
-	top: 0;
-    }
-    .menu-open .burger-menu-line:after {
-	transform: rotate(-45deg);
-	top: 0;
-    }
+
      .menu-form {
-    display: block;
-    position: relative;
-	padding: 20px 20px 101px 20px;
-	border: 1px solid #fff;
-	margin: 0 0 141px;
+	    display: block;
+	    position: relative;
+		padding: 20px 20px 101px 20px;
+		border: 1px solid #fff;
+		margin: 0 0 141px;
     }
     .menu-form-textarea {
-    background: #000;
+        background: #000;
     }
     .menu-form-textarea::placeholder {
-	font-size: 18px;
-	line-height: 29px;
-	color: #fff;
-	opacity: 0.5;
+		font-size: 18px;
+		line-height: 29px;
+		color: #fff;
+		opacity: 0.5;
     }
     .menu-form-btn {
-    width: 100%;
-	position: absolute;
-	background: #fff;
-	top: 176px;
-	right: 0px;
-	color: #000;
-	padding: 16px 60px;
-	margin-bottom: 60px;
-    font-size: 24px;
-    line-height: 28px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
+	    width: 100%;
+		position: absolute;
+		background: #fff;
+		top: 176px;
+		right: 0px;
+		color: #000;
+		padding: 16px 60px;
+		margin-bottom: 60px;
+	    font-size: 24px;
+	    line-height: 28px;
+	    border-radius: 8px;
+	    border: none;
+	    cursor: pointer;
     }
     .main {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
+	    width: 100%;
+	    margin: 0 auto;
+	    padding: 0 20px;
+	    text-align: center;
     }
     .title {
-	font-size: 20px;
-	line-height: 24px;
-	border-top: 1px solid #000000;
-	border-bottom: 1px solid #000000;
+		font-size: 20px;
+		line-height: 24px;
+		border-top: 1px solid #000000;
+		border-bottom: 1px solid #000000;
     }
-    .form-inner {
-	position: relative;
-	margin: 24px 0px 50px;
-	padding: 20px 20px 101px 20px;
+    .contact-form {
+		position: relative;
+		margin: 24px 0px 50px;
+		padding: 20px 20px 101px 20px;
     }
     .form-btn {
-	width: 100%;
-	position: absolute;
-	top: 176px;
-	right: 0px;
-	margin-bottom: 50px;
-    font-size: 24px;
-    line-height: 28px;
+		width: 100%;
+		position: absolute;
+		top: 176px;
+		right: 0px;
+		margin-bottom: 50px;
+	    font-size: 24px;
+	    line-height: 28px;
     }
-    textarea {
-	text-align: center;
+    .contact-form-textarea {
+	    text-align: center;
     }
 }
