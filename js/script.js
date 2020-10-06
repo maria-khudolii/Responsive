@@ -14,7 +14,7 @@ $('.slick-slider').slick({
 	waitForAnimate: false,
 	responsive: [
 		{
-			breakpoint: 1024,
+			breakpoint: 1165,
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2,

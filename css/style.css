@@ -306,7 +306,7 @@ textarea:focus::placeholder {
 }
 
 /* tablet */
-@media only screen and (min-width: 377px) and (max-width: 1024px) {
+@media only screen and (min-width: 377px) and (max-width: 1165px) {
 	.nav {
 		display: none;
 	}
@@ -404,7 +404,8 @@ textarea:focus::placeholder {
 		display: block;
 		position: fixed;
 		z-index: 150;
-		margin: 20px;
+		margin-top: -5px;
+		margin-left: 20px;
 	}
 	.burger-menu-line,
 	.burger-menu-line:after,
