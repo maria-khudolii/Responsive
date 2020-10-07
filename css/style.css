@@ -256,6 +256,7 @@ header {
 		outline: none;
 		resize: none;
 		background: #000;
+		text-align: center;
     }
      .menu-form-textarea::placeholder {
 		font-size: 18px;
@@ -277,11 +278,6 @@ header {
 		cursor: pointer;
 		border: none;
     }
-	.menu-open .burger-menu-line,
-	.menu-open .burger-menu-line:before,
-	.menu-open .burger-menu-line:after {
-		background: #fff;
-	}
     .container {
 	    width: 100%;
 	    margin: 0 auto;
@@ -333,11 +329,6 @@ header {
 		width: 80px;
 		height: 48px;
 	}
-	.menu-open .burger-menu-line,
-	.menu-open .burger-menu-line:before,
-	.menu-open .burger-menu-line:after {
-		background: #fff;
-	}
 
      .menu-form {
 	    display: block;
@@ -348,12 +339,20 @@ header {
     }
     .menu-form-textarea {
         background: #000;
+        border: none;
+        outline: none;
+	    resize: none;
+	    width: 100%;
+	    text-align: center;
     }
     .menu-form-textarea::placeholder {
 		font-size: 18px;
 		line-height: 29px;
 		color: #fff;
 		opacity: 0.5;
+    }
+    .contact-form-textarea:focus::placeholder {
+	    color: transparent;
     }
     .menu-form-btn {
 	    width: 100%;
@@ -400,3 +399,35 @@ header {
 	    text-align: center;
     }
 }
+@media only screen and (min-width: 376px) and (max-width: 629px) {
+	.menu-form {
+	    display: block;
+	    position: relative;
+		padding: 20px 20px 101px 20px;
+	}
+    .menu-form-btn {
+	    width: 100%;
+		position: absolute;
+		top: 176px;
+		right: 0px;
+		padding: 16px 60px;
+	    font-size: 24px;
+	    line-height: 28px;
+    }
+	  .contact-form {
+		position: relative;
+		margin: 24px 0px 50px;
+		padding: 20px 20px 101px 20px;
+    }
+    .form-btn {
+		width: 100%;
+		position: absolute;
+		top: 176px;
+		right: 0px;
+		margin-bottom: 50px;
+	    font-size: 24px;
+	    line-height: 28px;
+    }
+    .contact-form-textarea {
+	    text-align: center;
+    }
