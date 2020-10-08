@@ -166,7 +166,7 @@ header .contact-form {
 
 /* tablet */
 @media only screen
-and (min-width: 501px)
+and (min-width: 377px)
 and (max-width: 1024px) {
 	.nav {
 		display:none;
@@ -237,67 +237,12 @@ and (max-width: 1024px) {
 @media only screen
 and (min-width: 377px)
 and (max-width: 500px) {
-	.nav {
-		display:none;
-	}
-	.burger-menu {
-			display: inline-block;
-			vertical-align: top;
-	}
-	.menu-open header {
-	background: #000; 	
-	}
-	.menu-open .logo * {
-		fill: #fff;	
-	}
-	.menu-open .burger-menu-line,
-	.menu-open .burger-menu-line:before,
-	.menu-open .burger-menu-line:after  {
-		background: #fff;
-	}
-
-	.container {
-    	width: 100%;
-    	margin: 0 auto;
-    	padding: 0 48px;
-    	text-align: center;
-    	}
 
 	.text {
 		font-size: 20px;
 		line-height: 24px;
 		margin: 0 0 47px 0;
 		padding: 0;
-		}
-	.title {
-		font-size: 28px; 
-		line-height: 34px; 
-		padding: 16px 0px; 
-		text-transform: uppercase; 
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
-		margin-bottom: 32px; 
-		}
-
-	.history {
-		display: block; 
-		margin: 0 0 32px 0px;
-		}
-
-	.history-content {
-		display: block;
-		padding: 48px;
-		margin-bottom: 32px;
-		font-size: 18px;
-		line-height: 22px; 
-		color: #fff;
-		}
-
-	.history-content span {
-		font-size: 48px;
-		}
-	.history-content + .history-content {
-		margin: 0;
 		}
 	}
 
