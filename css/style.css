@@ -305,15 +305,19 @@ textarea:focus::placeholder {
 .slick-slider .slick-dots li.slick-active button {
 	background-color: black;
 }
-
+.slider {
+	max-width: 1400px;
+	min-width: 0;
+	margin: 0px auto;
+}
 /* tablet */
+
 @media only screen and (min-width: 377px) and (max-width: 1165px) {
 	.nav {
 		display: none;
 	}
 	.burger-menu {
-		display: inline-block;
-		vertical-align: top;
+		display: block;
 	}
 	.menu-open header {
 		background: #000;
@@ -389,6 +393,7 @@ textarea:focus::placeholder {
 		margin: 40px 5px 50px;
 	}
 }
+
 @media only screen and (min-width: 1166px) and (max-width: 1352px) {
 	.slick-slider {
 		max-width: 860px;
@@ -415,17 +420,14 @@ textarea:focus::placeholder {
 }
 
 /* little tablet */
-@media only screen
-and (min-width: 377px)
-and (max-width: 500px) {
-
+@media only screen and (min-width: 377px) and (max-width: 500px) {
 	.text {
 		font-size: 20px;
 		line-height: 24px;
 		margin: 0 0 47px 0;
 		padding: 0;
-		}
 	}
+}
 
 /* mobile */
 @media only screen and (min-width: 377px) and (max-width: 447px) {
