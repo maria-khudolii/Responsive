@@ -516,9 +516,6 @@ header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 376px) {
-	.wrapper {
-		position: relative;
-	}
 	.logo {
 		display: none;
 	}
@@ -527,6 +524,7 @@ header {
 	}
 	header {
 		padding: 24px 20px;
+		margin-bottom: 152px;
 	}
 	.burger-menu {
 		display: inline-block;
@@ -591,7 +589,7 @@ header {
 	}
 	.container {
 		width: 100%;
-		margin: -80px auto;
+		margin: 0px auto;
 		padding: 0 20px;
 		text-align: center;
 	}
@@ -640,9 +638,9 @@ header {
 	}
 	.slick-slider {
 		max-width: 375px;
-		margin: 0 auto;
+		margin: 0px auto;
 		overflow: hidden;
-		position: relative;
+		position: absolute;
 		top: 0px;
 		z-index: 50;
 	}
@@ -716,38 +714,3 @@ header {
 		border: none;
 	}
 }
-/* @media only screen and (min-width: 376px) and (max-width: 629px) {
-	.menu-open.menu-form {
-		display: block;
-		position: relative;
-		padding: 20px 20px 101px 20px;
-	}
-	.menu-form-btn {
-		width: 100%;
-		position: absolute;
-		top: 176px;
-		right: 0px;
-		padding: 16px 60px;
-		font-size: 24px;
-		line-height: 28px;
-	}
-	.contact-form {
-		position: relative;
-		margin: 24px 0px 50px;
-		padding: 20px 20px 101px 20px;
-	}
-	.form-btn {
-		width: 100%;
-		position: absolute;
-		top: 176px;
-		right: 0px;
-		margin-bottom: 50px;
-		font-size: 24px;
-		line-height: 28px;
-	}
-	.contact-form-textarea {
-		text-align: center;
-	}
-} */
-
-/* Форма вверху, для чего она?  */
