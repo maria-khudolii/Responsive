@@ -642,7 +642,7 @@ header {
 		max-width: 375px;
 		margin: 0 auto;
 		overflow: hidden;
-		position: absolute;
+		position: relative;
 		top: 0px;
 		z-index: 50;
 	}
