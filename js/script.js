@@ -1,3 +1,9 @@
+$(document).ready(function () {
+	$('.burger-menu').click(function (event) {
+		$('.wrapper').toggleClass('menu-open');
+	});
+});
+
 $('.slick-slider').slick({
 	arrows: false,
 	dots: true,
@@ -44,4 +50,5 @@ $('.slick-slider').slick({
 		// settings: "unslick"
 		// instead of a settings object
 	]
+
 });

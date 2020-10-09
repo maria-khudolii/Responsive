@@ -181,6 +181,7 @@ header {
 	height: 5px;
 	background: #000;
 	position: relative;
+	transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
 }
 .burger-menu-line:before,
 .burger-menu-line:after {
@@ -191,6 +192,7 @@ header {
 	background: #000;
 	position: absolute;
 	left: 0;
+	transition: cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
 }
 .burger-menu-line:before {
 	top: 10px;
@@ -199,7 +201,7 @@ header {
 	top: 20px;
 }
 
-header .contact-form {
+.menu-form {
 	display: none;
 }
 
@@ -242,7 +244,7 @@ header .contact-form {
 .history-content span {
 	font-size: 48px;
 }
-.form-inner {
+.contact-form {
 	display: flex;
 	align-items: center;
 	padding: 30px;
@@ -250,17 +252,17 @@ header .contact-form {
 	border: 1px solid #000000;
 	margin: 47px 0px;
 }
-textarea {
+.contact-form-textarea {
 	width: 100%;
 	border: none;
 	outline: none;
 	resize: none;
 }
-textarea::placeholder {
+.contact-form-textarea::placeholder {
 	font-size: 18px;
 	line-height: 22px;
 }
-textarea:focus::placeholder {
+.contact-form-textarea:focus::placeholder {
 	color: transparent;
 }
 .form-btn {
@@ -312,32 +314,62 @@ textarea:focus::placeholder {
 }
 /* tablet */
 
-@media only screen and (min-width: 377px) and (max-width: 1165px) {
+@media only screen and (min-width: 376px) and (max-width: 1165px) {
 	.nav {
 		display: none;
 	}
 	.burger-menu {
 		display: block;
 	}
+	header {
+		padding: 48px;
+	}
 	.menu-open header {
 		background: #000;
+		transition-duration: 0.8s;
+		position: sticky;
+		top: 0;
 	}
 	.logo * {
 		width: 80px;
 		height: 48px;
 	}
 	.logo {
-		margin: -32px auto 16px;
+		margin: -35px auto 16px;
+	}
+	.menu-open .logo {
+		margin: -42px auto 106px;
 	}
 	.menu-open .logo * {
 		fill: #fff;
 	}
 	.menu-open .burger-menu-line,
-	.menu-open .burger-menu-line:before,
-	.menu-open .burger-menu-line:after {
+	.menu-open .burger-menu-line:before {
 		background: #fff;
 	}
-
+	.menu-open .burger-menu-line::after {
+		display: none;
+	}
+	.menu-open .burger-menu-line {
+		transform: rotate(-45deg);
+	}
+	.menu-open .burger-menu-line:before {
+		transform: rotate(90deg);
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	.menu-open .nav {
+		display: flex;
+		justify-content: center;
+	}
+	.menu-open .nav a {
+		color: #fff;
+	}
+	.menu-open .nav-item a:hover {
+		border-bottom: 2px solid #fff;
+		transition: all 50ms ease-in-out;
+	}
 	.container {
 		width: 100%;
 		margin: 0 auto;
@@ -360,7 +392,46 @@ textarea:focus::placeholder {
 		border-bottom: 1px solid #000;
 		margin-bottom: 32px;
 	}
-
+	.menu-open .menu-form {
+		display: flex;
+		align-items: center;
+		padding: 30px;
+		width: 100%;
+		border: 1px solid #fff;
+		margin: 80px 0px 108px;
+	}
+	.menu-form-textarea {
+		width: 100%;
+		border: none;
+		outline: none;
+		resize: none;
+		background-color: transparent;
+		color: #fff;
+		opacity: 0.5;
+	}
+	.menu-form-textarea::placeholder {
+		color: #fff;
+		font-size: 18px;
+		line-height: 22px;
+		opacity: 0.5;
+	}
+	.menu-form-textarea:focus::placeholder {
+		color: #fff;
+	}
+	.menu-form-btn {
+		margin-left: 30px;
+		background: #fff;
+		border-radius: 8px;
+		color: #000;
+		font-size: 28px;
+		line-height: 34px;
+		padding: 15px 60px;
+		cursor: pointer;
+		border: none;
+	}
+	.menu-open .slick-slider {
+		display: none;
+	}
 	.history {
 		display: block;
 		margin: 0 0 32px 0px;
@@ -392,6 +463,9 @@ textarea:focus::placeholder {
 	.slick-dots li button {
 		margin: 40px 5px 50px;
 	}
+	.contact-form {
+		margin: 32px 0px 80px;
+	}
 }
 
 @media only screen and (min-width: 1166px) and (max-width: 1352px) {
@@ -420,7 +494,7 @@ textarea:focus::placeholder {
 }
 
 /* little tablet */
-@media only screen and (min-width: 377px) and (max-width: 500px) {
+@media only screen and (min-width: 376px) and (max-width: 500px) {
 	.text {
 		font-size: 20px;
 		line-height: 24px;
@@ -430,7 +504,7 @@ textarea:focus::placeholder {
 }
 
 /* mobile */
-@media only screen and (min-width: 377px) and (max-width: 447px) {
+@media only screen and (min-width: 376px) and (max-width: 447px) {
 	.slick-slider {
 		max-width: 375px;
 		margin: 0 auto;
@@ -442,6 +516,9 @@ textarea:focus::placeholder {
 }
 
 @media only screen and (min-width: 0) and (max-width: 376px) {
+	.wrapper {
+		position: relative;
+	}
 	.logo {
 		display: none;
 	}
@@ -449,36 +526,72 @@ textarea:focus::placeholder {
 		display: none;
 	}
 	header {
-		padding: 0;
+		padding: 24px 20px;
 	}
 	.burger-menu {
-		display: block;
-		position: fixed;
+		display: inline-block;
+		position: relative;
 		z-index: 150;
-		margin-top: -5px;
-		margin-left: 20px;
 	}
 	.burger-menu-line,
 	.burger-menu-line:after,
 	.burger-menu-line:before {
 		background: #fff;
 	}
+	.menu-open .logo {
+		display: block;
+		width: 80px;
+		height: 48px;
+		margin: -40px 0px 0px 234px;
+	}
 	.menu-open header {
 		background: #000;
+		transition-duration: 0.8s;
+		position: sticky;
+		height: 100vh;
+		top: 0;
+		z-index: 250;
 	}
 	.menu-open .logo * {
 		fill: #fff;
+	}
+	.menu-open .nav {
+		display: block;
+	}
+	.menu-open .nav-item {
+		margin: 48px 0px;
+	}
+	.menu-open .nav a {
+		color: #fff;
 	}
 	.menu-open .burger-menu-line,
 	.menu-open .burger-menu-line:before {
 		background: #fff;
 	}
-	.menu-open .burger-menu-line:after {
+	.menu-open .burger-menu-line::after {
 		display: none;
+	}
+	.menu-open .burger-menu-line {
+		transform: rotate(-45deg);
+		position: relative;
+		top: 10px;
+		left: -4px;
+	}
+	.menu-open .burger-menu-line:before {
+		transform: rotate(90deg);
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	.menu-open .container {
+		opacity: 0;
+	}
+	.menu-open .slick-slider {
+		opacity: 0;
 	}
 	.container {
 		width: 100%;
-		margin: 24px auto;
+		margin: -80px auto;
 		padding: 0 20px;
 		text-align: center;
 	}
@@ -527,10 +640,10 @@ textarea:focus::placeholder {
 	}
 	.slick-slider {
 		max-width: 375px;
+		margin: 0 auto;
 		overflow: hidden;
-		position: fixed;
-		top: 0;
-		left: 0;
+		position: absolute;
+		top: 0px;
 		z-index: 50;
 	}
 	.slick-slide,
@@ -547,4 +660,94 @@ textarea:focus::placeholder {
 		margin: 24px 5px;
 		padding: 0;
 	}
+	.contact-form {
+		position: relative;
+		margin: 24px 0px 50px;
+		padding: 20px 20px 101px 20px;
+	}
+	.form-btn {
+		width: 100%;
+		position: absolute;
+		top: 176px;
+		right: 0px;
+		margin-bottom: 50px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.contact-form-textarea {
+		text-align: center;
+	}
+	.menu-open .menu-form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 90px 0px 50px;
+	}
+	.menu-form-textarea {
+		width: 100%;
+		border: none;
+		outline: none;
+		resize: none;
+		text-align: center;
+		background-color: transparent;
+		color: #fff;
+		opacity: 0.5;
+		padding: 20px 20px 100px;
+		border: 1px solid #fff;
+		margin-bottom: 20px;
+	}
+	.menu-form-textarea::placeholder {
+		color: #fff;
+		font-size: 18px;
+		line-height: 22px;
+		opacity: 0.5;
+	}
+	.menu-form-textarea:focus::placeholder {
+		color: #fff;
+	}
+	.menu-form-btn {
+		background: #fff;
+		border-radius: 8px;
+		color: #000;
+		font-size: 24px;
+		line-height: 29px;
+		padding: 15px 60px;
+		cursor: pointer;
+		border: none;
+	}
 }
+/* @media only screen and (min-width: 376px) and (max-width: 629px) {
+	.menu-open.menu-form {
+		display: block;
+		position: relative;
+		padding: 20px 20px 101px 20px;
+	}
+	.menu-form-btn {
+		width: 100%;
+		position: absolute;
+		top: 176px;
+		right: 0px;
+		padding: 16px 60px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.contact-form {
+		position: relative;
+		margin: 24px 0px 50px;
+		padding: 20px 20px 101px 20px;
+	}
+	.form-btn {
+		width: 100%;
+		position: absolute;
+		top: 176px;
+		right: 0px;
+		margin-bottom: 50px;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.contact-form-textarea {
+		text-align: center;
+	}
+} */
+
+/* Форма вверху, для чего она?  */
