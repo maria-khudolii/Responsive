@@ -1,4 +1,4 @@
 Responsive layout 
 
-Please have a look at https://mashimara.github.io/HW_09_responsive/.
+Please have a look at https://maria-khudolii.github.io/Responsive/
 
